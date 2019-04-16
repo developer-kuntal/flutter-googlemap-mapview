@@ -1,5 +1,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.flutter_googlemap_mapview">
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.flutter_googlemap_mapview"
+    tools:replace="android:theme" 
+    android:theme="@android:style/Theme.Black.NoTitleBar"  
+    android:allowBackup="false">
 
     <!-- io.flutter.app.FlutterApplication is an android.app.Application that
          calls FlutterMain.startInitialization(this); in its onCreate method.
@@ -12,9 +16,11 @@
     <application
         android:name="io.flutter.app.FlutterApplication"
         android:label="flutter_googlemap_mapview"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/ic_launcher"                    
         tools:replace="android:appComponentFactory"
-        android:appComponentFactory="@string/action_settings">
+        android:appComponentFactory="android.support.v4.app.CoreComponentFactory"         
+        android:allowBackup="false"
+        tools:ignore="GoogleAppIndexingWarning,HardcodedDebugMode">
         
         <meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="AIzaSyD5LPQDM1bpAs6hxHa4CH1R7w3rzQ6FTKE"/>
         <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
@@ -39,9 +45,7 @@
             </intent-filter>
         </activity>
 
-        <!-- <meta-data android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyD5LPQDM1bpAs6hxHa4CH1R7w3rzQ6FTKE"/> -->
-        <activity android:name="com.apptreesoftware.mapview.MapActivity" android:theme="@style/Theme.AppCompat.Light.DarkActionBar"/>
+        <activity android:name="com.apptreesoftware.mapview.MapActivity" android:theme="@android:style/Theme.Black.NoTitleBar"/>
 
     </application>
 </manifest>
