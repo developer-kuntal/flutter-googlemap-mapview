@@ -52,7 +52,7 @@ packages:
       name: map_view
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.0.14"
+    version: "0.0.13"
   matcher:
     dependency: transitive
     description:
